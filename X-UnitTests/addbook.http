@@ -1,0 +1,16 @@
+@token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MmM0NzY1ZWE0ZjYzMTM4ZmM2N2E4YyIsImlhdCI6MTcxNDE3ODAwMSwiZXhwIjoxNzE1MDQyMDAxfQ.wcglL7VotVbXkWUyglZuW8595gOU8P1Kla0CS5JTTBU"
+
+@baseUrl = http://localhost:4000
+
+### Test: Add a new book
+POST http://localhost:4000/books/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{ 
+    "title": "Reverand Insanity", 
+    "author": "Ghu Zhen Re", 
+    "description": "Lights... Camera... Action", 
+    "exchangeType": "borrow", 
+    "status": "available" 
+}
